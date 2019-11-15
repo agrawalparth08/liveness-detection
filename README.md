@@ -21,5 +21,45 @@ The approaches he mentioned are the ones which are used today mostly for this pr
 6. __Combinations of the above__ - Enabling a face recognition system engineer to pick and choose the liveness detections models appropriate for their particular application.
 
 ## iBeta Liveness quality ISO [Standards][2]
+
+# Algorithms
+
+1. __High res face masks with eyes and lips and nose cutouts__ 
+    
+    Color Texture Analysis [Paper][3] [Matlab Code][4]
+    
+2. __Deep Learning CNN Approach__ - 
+
+    1. LivenessNet [Pyimagesearch][1] 
+    
+    2. Model 3 proposed in this [paper][5] and [source code][6] on CASIA-FASD Dataset.
+        The dataset has some restrictions of access. Try VPN (Southeast Asia) and registering [here][7]
+        
+3. __Red Eye + Texture Analysis__
+
+    This is a proposed approach which takes into consideration the hardware on which the face detection is to be run.
+    
+    Some references -
+    
+    1. [Selfie Flash][8] which gave me the idea that you don't need front flash in mobile device
+        
+    2. [Red Eye Effect][9] which takes away blinking plus video specific spoofing
+        
+    3. [Face Texture][10] found from the very interesting comparison [paper][11] for liveness detection 
+     
+    
+![alt text][algo]
+
+[algo]:  https://github.com/agrawalparth08/liveness-detection/blob/master/algorithm.jpg "Fusion Algorithm"
+
 [1]: https://www.pyimagesearch.com/2019/03/11/liveness-detection-with-opencv/
 [2]: https://liveness.com/
+[3]: https://www.researchgate.net/publication/301571761_Face_Spoofing_Detection_Using_Colour_Texture_Analysis
+[4]: https://github.com/zboulkenafet/Face-anti-spoofing-based-on-color-texture-analysis
+[5]: https://ieeexplore.ieee.org/document/8166863
+[6]: https://github.com/houliang428/CNN-for-face-anti-spoofing
+[7]: http://biometrics.idealtest.org/findTotalDbByMode.do?mode=Face
+[8]: https://play.google.com/store/apps/details?id=com.reactivstudios.android.selfieflash&hl=en_IN
+[9]: https://www.goodeyes.com/blog/red-eyes-photos/
+[10]: https://yonsei.pure.elsevier.com/en/publications/face-liveness-detection-based-on-texture-and-frequency-analyses
+[11]: https://arxiv.org/pdf/1405.2227
